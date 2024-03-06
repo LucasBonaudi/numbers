@@ -1,0 +1,8 @@
+.letter-box {
+    height: clamp(20px,3vw, 3vw);
+    font-size: clamp(15px, 3vw,3vw);
+}
+
+.letter-gap {
+    gap: clamp(5px, 3vw, 3vw)
+}

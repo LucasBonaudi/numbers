@@ -1,0 +1,12 @@
+<div class="flex justify-center p10">
+    <date-picker (dateValueChange)="onDateChange($event)"></date-picker>
+</div>
+
+<div class="flex justify-center p10">
+    <mat-form-field class="p10 w100">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="name">
+    </mat-form-field>
+</div>
+
+<name-display [name]="name"></name-display>
