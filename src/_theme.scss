@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@include mat.core();
+
+@mixin color($theme) {
+    .primary-color {
+        color: mat.get-theme-color($theme, primary, 500);
+    }
+
+    .accent-color {
+        color: mat.get-theme-color($theme, accent, 900);
+    }
+}
+@mixin theme($theme) {
+    @if mat.theme-has($theme, color) {
+      @include color($theme);
+    } 
+}
