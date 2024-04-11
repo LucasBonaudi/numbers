@@ -23,6 +23,7 @@ export class MainComponent {
   }
 
   onDateChange($event: any) {
+    console.log($event)
     this.personalNumbers.birthDate = $event.value._d
   }
 }

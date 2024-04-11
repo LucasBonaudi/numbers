@@ -33,9 +33,9 @@ export class PersonalNumbers {
         return this._birthDate;
     }
 
-    public set birthDate(value: any) {
-        if (value._i) {
-            this._birthDate = new Date(value._i.year, value._i.month, value._i.date);
+    public set birthDate(value: Date) {
+        if (value) {
+            this._birthDate = value;
 
             this.so = PersonalNumbers.calculateSO(this._birthDate);
 
@@ -61,7 +61,7 @@ export class PersonalNumbers {
 
     constructor (birthDate?: Date, name?:string) {
         if (birthDate) 
-            this.birthDate = { "_i": { "year": birthDate.getFullYear(), "month": birthDate.getMonth(), "date": birthDate.getMonth() } };
+            this.birthDate = birthDate;
         
         if(name) 
             this.name = name;
@@ -102,16 +102,6 @@ export class PersonalNumbers {
         const m = new NumerologyValue(Math.abs(k.reducedValue - l.reducedValue))
         const o = new NumerologyValue(k.reducedValue + l.reducedValue + m.reducedValue)
         const p = new NumerologyValue(d.reducedValue + o.reducedValue)
-
-        console.log("A", a)
-        console.log("B", b)
-        console.log("C", c)
-        console.log("D", d)
-        console.log("K", k)
-        console.log("L", l)
-        console.log("M", m)
-        console.log("O", o)
-        console.log("P", p)
 
         return p
     }
