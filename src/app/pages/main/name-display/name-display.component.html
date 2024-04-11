@@ -1,17 +1,11 @@
 <div *ngIf="name">
-<div class="flex justify-center letter-gap">
+<div class="grid-container">
 
-    <div *ngFor="let letter of getStrChars(name); index as i;" class="flex f-column">
+    <div *ngFor="let letter of name.charValuesName; index as i;" class="grid-item">
 
-        <div class="letter-box flex align-center justify-center">{{ !numbers.isConsonant(letter) ? numbers.getLetterValue(letter) : '' }}</div>
-        <div class="letter-box flex align-center justify-center">{{ letter }}</div>
-        <div class="letter-box flex align-center justify-center">{{ numbers.isConsonant(letter) ? numbers.getLetterValue(letter) : '' }}</div>
+        <div class="accent-color letter-box flex align-center justify-center">{{ letter.isVowel ? letter.value?.display : '' }}</div>
+        <div class="primary-color letter-box flex align-center justify-center">{{ letter.letter }}</div>
+        <div class="accent-color letter-box flex align-center justify-center">{{ !letter.isVowel ? letter.value?.display : '' }}</div>
 
     </div>
-
-    <div class="flex f-column">
-        <div class="letter-box flex align-center justify-center">P.E. 45/5</div>
-        <div class="letter-box flex align-center justify-center"></div>
-        <div class="letter-box flex align-center justify-center">N.A. 09/4</div>
-    </div>
-</div>
+</div> 

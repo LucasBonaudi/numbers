@@ -1,8 +1,25 @@
 .letter-box {
     height: clamp(20px,3vw, 3vw);
-    font-size: clamp(15px, 3vw,3vw);
+    font-size: clamp(15px, 2vw, 2vw);
 }
 
 .letter-gap {
-    gap: clamp(5px, 3vw, 3vw)
+    gap: clamp(5px, 1vw, 1vw)
 }
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+    grid-gap: 5px;
+  }
+  
+  .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    width: 20px; 
+  }
+  

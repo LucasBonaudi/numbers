@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { NumberService } from '../../../services/number.service';
+import { NumerologyName } from '../../../models/numerology-name';
 
 @Component({
   selector: 'name-display',
@@ -7,19 +7,9 @@ import { NumberService } from '../../../services/number.service';
   styleUrl: './name-display.component.scss'
 })
 export class NameDisplayComponent {
-  @Input() name: string = '';
-   
-  constructor(public numbers: NumberService) {
+  @Input() name: NumerologyName = new NumerologyName('');
+
+  constructor() {
     
-  }
-
-  getStrChars(str: string) {
-    let arr: string[] = [];
-
-    str.split('').forEach(char => {
-      arr.push(char);
-    });
-
-    return arr
   }
 }

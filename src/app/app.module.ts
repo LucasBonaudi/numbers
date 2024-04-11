@@ -8,7 +8,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDatepickerModule } from '@angular/material/datepicker'; 
 import { MainComponent } from './pages/main/main.component';
-import { DatePickerComponent } from './utils/date-picker/date-picker.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { RouterModule } from '@angular/router';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -17,6 +16,9 @@ import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/materia
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
 import { NameDisplayComponent } from './pages/main/name-display/name-display.component';
 import { FormsModule } from '@angular/forms';
+import { MainNumbersComponent } from './pages/main/main-numbers/main-numbers.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { LifeBalanceComponent } from './pages/main/life-balance/life-balance.component';
 
 const MY_DATE_FORMAT = {
   parse: {
@@ -35,8 +37,9 @@ const MY_DATE_FORMAT = {
     AppComponent,
     NavbarComponent,
     MainComponent,
-    DatePickerComponent,
-    NameDisplayComponent
+    NameDisplayComponent,
+    MainNumbersComponent,
+    LifeBalanceComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ const MY_DATE_FORMAT = {
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatDividerModule
   ],
   providers: [
     provideAnimationsAsync(),

@@ -1,12 +1,26 @@
 <div class="flex justify-center p10">
-    <date-picker (dateValueChange)="onDateChange($event)"></date-picker>
+    <mat-form-field>
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="personalNumbers.birthDate" >
+        <mat-hint>DD/MM/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>    
 </div>
 
 <div class="flex justify-center p10">
     <mat-form-field class="p10 w100">
         <mat-label>Name</mat-label>
-        <input matInput [(ngModel)]="name">
+        <input matInput [(ngModel)]="personalNumbers.name" (ngModelChange)="onNameChange($event)">
     </mat-form-field>
 </div>
 
-<name-display [name]="name"></name-display>
+<name-display [name]="personalNumbers.name"></name-display>
+
+<mat-divider></mat-divider>
+
+<main-numbers [numbers]="personalNumbers"></main-numbers>
+
+<mat-divider></mat-divider>
+
+<life-balance [name]="personalNumbers.name"></life-balance>
