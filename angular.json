@@ -72,7 +72,7 @@
                 }
               ],
               "outputHashing": "all",
-              "outputPath": "site"
+              "outputPath": "docs"
             },
             "development": {
               "optimization": false,
