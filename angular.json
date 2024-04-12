@@ -72,7 +72,8 @@
                 }
               ],
               "outputHashing": "all",
-              "outputPath": "docs"
+              "outputPath": "docs",
+              "baseHref": "/numbers/"
             },
             "development": {
               "optimization": false,
