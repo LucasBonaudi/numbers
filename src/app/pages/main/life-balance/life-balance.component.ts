@@ -20,9 +20,9 @@ export class LifeBalanceComponent {
   }
 
   getBalanceClass(number: number) : string {
-    if (number >= 1 && number <= 2) {
+    if (number >= 0 && number <= 2) {
       return 'deficieny';
-    } else if (number >= 3 && number <= 4) {
+    } else if (number >= 3 && number < 4) {
       return 'balanced';
     } else {
       return 'excess';

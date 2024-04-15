@@ -1,0 +1,14 @@
+<div class="grid-container">
+    <div class="grid-item">
+        <span>(1 - {{ firstCycle }})</span>
+        <span class="primary-color">{{ value1 }}</span>
+    </div>
+    <div class="grid-item">
+        <span>({{ (firstCycle ?? firstCycle ?? 0) + 1  }} - {{ (firstCycle ?? firstCycle ?? 0) + 18 }})</span> 
+        <span class="primary-color">{{ value2 }}</span>
+    </div>
+    <div class="grid-item">
+        <span>({{ (firstCycle ?? firstCycle ?? 0) + 19 }} - ...)</span> 
+        <span class="primary-color"> {{ value1 }} </span>
+    </div>
+</div>

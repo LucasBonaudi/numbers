@@ -52,7 +52,7 @@ export class NumerologyLetter {
 
         if (letterValues.hasOwnProperty(upperCaseLetter))
             this.value = new NumerologyValue(letterValues[upperCaseLetter]);
-
+        
         
         this.isVowel = vowels.includes(upperCaseLetter); 
     }
