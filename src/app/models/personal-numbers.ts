@@ -84,7 +84,7 @@ export class PersonalNumbers {
         return value
     }
 
-    private static sumDigits(n: number) : number {
+    static sumDigits(n: number) : number {
         return n.toString().split('').reduce((sum, d) =>  sum + parseInt(d), 0)
     }
 

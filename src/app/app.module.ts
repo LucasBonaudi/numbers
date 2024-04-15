@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { MainNumbersComponent } from './pages/main/main-numbers/main-numbers.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { LifeBalanceComponent } from './pages/main/life-balance/life-balance.component';
+import { LifeCiclesComponent } from './pages/main/life-cycles/life-cycles.component';
 
 const MY_DATE_FORMAT = {
   parse: {
@@ -40,6 +41,7 @@ const MY_DATE_FORMAT = {
     NameDisplayComponent,
     MainNumbersComponent,
     LifeBalanceComponent,
+    LifeCiclesComponent,
   ],
   imports: [
     BrowserModule,
