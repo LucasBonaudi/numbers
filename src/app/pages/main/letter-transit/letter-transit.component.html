@@ -1,0 +1,12 @@
+<div class="grid-container">
+
+    <div *ngFor="let letter of name.charValuesName; index as i;" class="item">
+
+        <ng-container *ngIf="letter.letter != ' '">
+            <div class="flex justify-center primary-color">{{ letter.letter }} =</div>
+            <div class="flex justify-center accent-color">{{ letter.value?.display }}</div>
+            <div class="flex justify-center">( {{ getYearFrom(i) }}  - {{ getYearFrom(i) + (letter.value?.reducedValue??0) }} )</div>
+            <div class="flex justify-center bold">{{ letter.value?.reducedValue }}</div>
+        </ng-container>
+    </div>
+</div> 

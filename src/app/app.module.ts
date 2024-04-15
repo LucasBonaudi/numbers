@@ -20,6 +20,7 @@ import { MainNumbersComponent } from './pages/main/main-numbers/main-numbers.com
 import { MatDividerModule } from '@angular/material/divider';
 import { LifeBalanceComponent } from './pages/main/life-balance/life-balance.component';
 import { LifeCiclesComponent } from './pages/main/life-cycles/life-cycles.component';
+import { LetterTransitComponent } from './pages/main/letter-transit/letter-transit.component';
 
 const MY_DATE_FORMAT = {
   parse: {
@@ -42,6 +43,7 @@ const MY_DATE_FORMAT = {
     MainNumbersComponent,
     LifeBalanceComponent,
     LifeCiclesComponent,
+    LetterTransitComponent,
   ],
   imports: [
     BrowserModule,
